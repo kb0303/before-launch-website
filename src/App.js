@@ -104,6 +104,8 @@ function App() {
   const handlePhoneSubmit = () => {
     if (!phone) {
       setPhoneError('Contact Number is required');
+    } else if (!validatePhoneNumber(phone)) {
+      setPhoneError('Contact Number must be a 10-digit number without special characters or spaces');
     } else {
       setPhoneError('');
       const formData = { email, ...selectedOptions, manufacturer, phone };
