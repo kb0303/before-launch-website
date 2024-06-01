@@ -4,62 +4,119 @@ import wishgeeks_logo from './img/wishgeeks_logo.png';
 const issuesQA = {
   connect_printer: [
     {
-      question: "How do I connect my printer to WiFi?",
-      answer: "To connect your printer to WiFi, go to the printer's settings menu, select WiFi setup, and follow the instructions to connect to your wireless network."
+      question: "Connection Failure or Troubleshoot Issue",
+      answer: {
+        mainText: "",
+        steps: [],
+        additionalText: ""
+      }
     },
     {
-      question: "What should I do if my printer cannot find the WiFi network?",
-      answer: "Ensure your WiFi network is operational, and the printer is within range. You may also need to enter the network details manually if the SSID is hidden."
+      question: "Operating System or Driver Issue",
+      answer: {
+        mainText: "",
+        steps: [],
+        additionalText: ""
+      }
     },
   ],
   printer_offline: [
     {
-      question: "Why is my printer showing as offline?",
-      answer: "Your printer might show as offline if there is a connectivity issue, if it’s turned off, or if there is a problem with the printer drivers."
+      question: "Connection Failure or Troubleshoot Issue",
+      answer: {
+        mainText: "If your printer can't communicate with your computer, a Hard Reset is necessary to restore the connection.",
+        steps: ["First, turn off the printer and disconnect all cables.", "Next, reconnect all cables and press the On/Off button for 5 seconds.", "Once the printer restarts, link it to your computer and begin printing."],
+        additionalText: "If the On/Off button blinks or shows a red/orange light, further troubleshooting is required."
+      }
     },
     {
-      question: "How do I bring my printer back online?",
-      answer: "Try restarting the printer and computer. Ensure the printer is connected to the same network as your computer. You may also need to set the printer to 'online' mode in the printer settings."
+      question: "Operating System or Driver Issue",
+      answer: {
+        mainText: "After updating your operating system, your printer might appear offline if the drivers need updating. This can also occur with a new printer. Here's what to do:",
+        steps: ["Go to System Settings and check for any pending updates.", "Visit the official website of the printer manufacturer and download the latest setup file.", "Once the setup file is downloaded, open Device Manager and update the printer driver. Look for a file with a name similar to your printer brand.", "Remove or update any pending drivers and run the downloaded setup file."],
+        additionalText: "If you can't update the drivers yourself or identify the necessary drivers, seek further assistance."
+      }
     },
+    {
+      question: "Wireless Connection Issue",
+      answer: {
+        mainText: "When setting up a wireless printer, ensure that both your printer and computer/laptop are connected to the same Wi-Fi network. Begin by connecting your computer or laptop to your home Wi-Fi.",
+        steps: ["First, check that the white/blue light on your printer is on. If it's not, restart the printer and ensure the light turns on.", "Ensure your printer is within 5 meters of your router.", "On your printer, press the Wi-Fi button and confirm that the blue Wi-Fi light is on.", "If the light is blinking, restart the printer and repeat the steps above."],
+        additionalText: "If the Wi-Fi light continues to blink or shows red/orange, it means your computer is unable to communicate with the printer."
+      }
+    }
+
   ],
   troubleshoot_printer: [
     {
       question: "What are common troubleshooting steps for printer issues?",
-      answer: "Common steps include checking the power and connections, ensuring there is paper and ink, running the printer's self-diagnostic tools, and updating drivers."
+      answer: {
+        mainText: "",
+        steps: [],
+        additionalText: ""
+      }
     },
     {
       question: "How do I update my printer drivers?",
-      answer: "You can update printer drivers from the manufacturer's website or through your operating system's device manager."
+      answer: {
+        mainText: "",
+        steps: [],
+        additionalText: ""
+      }
     },
   ],
   printer_wont_print: [
     {
       question: "What are common troubleshooting steps for printer issues?",
-      answer: "Common steps include checking the power and connections, ensuring there is paper and ink, running the printer's self-diagnostic tools, and updating drivers."
+      answer: {
+        mainText: "",
+        steps: [],
+        additionalText: ""
+      }
     },
     {
       question: "How do I update my printer drivers?",
-      answer: "You can update printer drivers from the manufacturer's website or through your operating system's device manager."
+      answer: {
+        mainText: "",
+        steps: [],
+        additionalText: ""
+      }
     },
   ],
   paper_jam_in_printer: [
     {
       question: "What are common troubleshooting steps for printer issues?",
-      answer: "Common steps include checking the power and connections, ensuring there is paper and ink, running the printer's self-diagnostic tools, and updating drivers."
+      answer: {
+        mainText: "",
+        steps: [],
+        additionalText: ""
+      }
     },
     {
       question: "How do I update my printer drivers?",
-      answer: "You can update printer drivers from the manufacturer's website or through your operating system's device manager."
+      answer: {
+        mainText: "",
+        steps: [],
+        additionalText: ""
+      }
     },
   ],
   setting_up_new_printer: [
     {
       question: "What are common troubleshooting steps for printer issues?",
-      answer: "Common steps include checking the power and connections, ensuring there is paper and ink, running the printer's self-diagnostic tools, and updating drivers."
+      answer: {
+        mainText: "",
+        steps: [],
+        additionalText: ""
+      }
     },
     {
       question: "How do I update my printer drivers?",
-      answer: "You can update printer drivers from the manufacturer's website or through your operating system's device manager."
+      answer: {
+        mainText: "",
+        steps: [],
+        additionalText: ""
+      }
     },
   ],
 };
@@ -98,7 +155,14 @@ function IssueResolve({ issue }) {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body">
-                    {item.answer}
+                    <p>{item.answer.mainText}</p>
+                    <ul>
+                      {item.answer.steps.map((step, i) => (
+                        <li key={i}>{step}</li>
+                      ))}
+                    </ul>
+                    <p>{item.answer.additionalText}</p>
+                    <button className='btn btn-primary fw-bold'>Start Chat</button>
                   </div>
                 </div>
               </div>
@@ -108,7 +172,6 @@ function IssueResolve({ issue }) {
         <div className='chatbot-outer-container'></div>
       </div>
     </div>
-
   );
 }
 

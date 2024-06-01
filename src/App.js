@@ -108,7 +108,7 @@ function App() {
       setPhoneError('');
       const formData = { email, ...selectedOptions, manufacturer, phone };
       setIsSubmitting(true);
-      axios.post('http://localhost:5000/api/save', formData)
+      axios.post('https://before-launch-website-backend.onrender.com/api/save', formData)
         .then(response => {
           console.log('Data saved:', response.data);
           setTimeout(() => {
