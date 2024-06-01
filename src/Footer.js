@@ -6,7 +6,7 @@ function Footer() {
 			<div className="container mt-4">
 				<footer className="pt-5">
 					<div className="row">
-						<div className="col-6 col-md-2 mb-3">
+						<div className="col-12 col-md-2 mb-3">
 							<h5>Section</h5>
 							<ul className="nav flex-column">
 								<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Home</a></li>
@@ -17,7 +17,7 @@ function Footer() {
 							</ul>
 						</div>
 
-						<div className="col-6 offset-md-1 mb-3">
+						<div className="col-12 col-lg-6 offset-md-1 mb-3">
 							<form>
 								<h5>Subscribe to our newsletter</h5>
 								<p>Monthly digest of what's new and exciting from us.</p>

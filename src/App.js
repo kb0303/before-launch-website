@@ -75,7 +75,7 @@ function App() {
 
   const handleNextClick = () => {
     if (!manufacturer) {
-      setManufacturerError('Printer Name is required');
+      setManufacturerError('Printer Mode is required');
     } else {
       setManufacturerError('');
       setCurrentQuiz((prev) => prev + 1);
@@ -99,6 +99,11 @@ function App() {
         [currentQuiz + 1]: 'block',
       }));
     }, 500);
+  };
+
+  const validatePhoneNumber = (phone) => {
+    const phonePattern = /^\d{10}$/;
+    return phonePattern.test(phone);
   };
 
   const handlePhoneSubmit = () => {
@@ -228,12 +233,12 @@ function App() {
             </div>
 
             <div id="quiz-container4" className="quiz-container mt-5" style={{ display: displayQuiz[4] }}>
-              <h5>Q4. WHAT IS YOUR PRINTER NAME?</h5>
+              <h5>Q4. WHAT IS YOUR PRINTER MODE?</h5>
               <div className="quiz-options-container mt-5">
                 <img src={manufacturerImg} alt="Manufacturer Design" className='manufacturer-img' />
                 <div className="row g-3 align-items-center email-input-container">
-                  <label htmlFor="manufacturer" className="form-label">Printer Name: </label>
-                  <input type="text" className="form-control" id="manufacturer" name="manufacturer" placeholder="Enter Your Printer Name here" onChange={(e) => setManufacturer(e.target.value)} required />
+                  <label htmlFor="manufacturer" className="form-label">Printer Mode: </label>
+                  <input type="text" className="form-control" id="manufacturer" name="manufacturer" placeholder="Enter Your Printer Mode here" onChange={(e) => setManufacturer(e.target.value)} required />
                   {manufacturerError && <div className="error-message text-danger">{manufacturerError}</div>}
                 </div>
                 <button type="button" className="btn btn-success next-btn" onClick={handleNextClick}>Next</button>
