@@ -202,7 +202,7 @@ function IssueResolve({ issue }) {
                       ))}
                     </ul>
                     <p>{item.answer.additionalText}</p>
-                    <button className='btn btn-primary fw-bold'>Start Chat</button>
+                    <button className='btn btn-primary fw-bold'>Call Us Now</button>
                   </div>
                 </div>
               </div>
