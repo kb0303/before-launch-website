@@ -4,29 +4,11 @@ import wishgeeks_logo from './img/wishgeeks_logo.png';
 const issuesQA = {
   connect_printer: [
     {
-      question: "Connection Failure or Troubleshoot Issue",
-      answer: {
-        mainText: "",
-        steps: [],
-        additionalText: ""
-      }
-    },
-    {
       question: "Operating System or Driver Issue",
       answer: {
-        mainText: "",
-        steps: [],
-        additionalText: ""
-      }
-    },
-  ],
-  printer_offline: [
-    {
-      question: "Connection Failure or Troubleshoot Issue",
-      answer: {
-        mainText: "If your printer can't communicate with your computer, a Hard Reset is necessary to restore the connection.",
-        steps: ["First, turn off the printer and disconnect all cables.", "Next, reconnect all cables and press the On/Off button for 5 seconds.", "Once the printer restarts, link it to your computer and begin printing."],
-        additionalText: "If the On/Off button blinks or shows a red/orange light, further troubleshooting is required."
+        mainText: "After updating your operating system, your printer might appear offline if the drivers need updating. This can also occur with a new printer. Here's what to do:",
+        steps: ["Go to System Settings and check for any pending updates.", "Visit the official website of the printer manufacturer and download the latest setup file.", "Once the setup file is downloaded, open Device Manager and update the printer driver. Look for a file with a name similar to your printer brand.", "Remove or update any pending drivers and run the downloaded setup file."],
+        additionalText: "If you can't update the drivers yourself or identify the necessary drivers, seek further assistance."
       }
     },
     {
@@ -38,86 +20,144 @@ const issuesQA = {
       }
     },
     {
-      question: "Wireless Connection Issue",
+      question: "Operating System or Driver Issue",
       answer: {
-        mainText: "When setting up a wireless printer, ensure that both your printer and computer/laptop are connected to the same Wi-Fi network. Begin by connecting your computer or laptop to your home Wi-Fi.",
-        steps: ["First, check that the white/blue light on your printer is on. If it's not, restart the printer and ensure the light turns on.", "Ensure your printer is within 5 meters of your router.", "On your printer, press the Wi-Fi button and confirm that the blue Wi-Fi light is on.", "If the light is blinking, restart the printer and repeat the steps above."],
-        additionalText: "If the Wi-Fi light continues to blink or shows red/orange, it means your computer is unable to communicate with the printer."
+        mainText: "After updating your operating system, your printer might appear offline if the drivers need updating. This can also occur with a new printer. Here's what to do:",
+        steps: ["Go to System Settings and check for any pending updates.", "Visit the official website of the printer manufacturer and download the latest setup file.", "Once the setup file is downloaded, open Device Manager and update the printer driver. Look for a file with a name similar to your printer brand.", "Remove or update any pending drivers and run the downloaded setup file."],
+        additionalText: "If you can't update the drivers yourself or identify the necessary drivers, seek further assistance."
+      }
+    }
+  ],
+  printer_offline: [
+    {
+      question: "Operating System or Driver Issue",
+      answer: {
+        mainText: "After updating your operating system, your printer might appear offline if the drivers need updating. This can also occur with a new printer. Here's what to do:",
+        steps: ["Go to System Settings and check for any pending updates.", "Visit the official website of the printer manufacturer and download the latest setup file.", "Once the setup file is downloaded, open Device Manager and update the printer driver. Look for a file with a name similar to your printer brand.", "Remove or update any pending drivers and run the downloaded setup file."],
+        additionalText: "If you can't update the drivers yourself or identify the necessary drivers, seek further assistance."
+      }
+    },
+    {
+      question: "Operating System or Driver Issue",
+      answer: {
+        mainText: "After updating your operating system, your printer might appear offline if the drivers need updating. This can also occur with a new printer. Here's what to do:",
+        steps: ["Go to System Settings and check for any pending updates.", "Visit the official website of the printer manufacturer and download the latest setup file.", "Once the setup file is downloaded, open Device Manager and update the printer driver. Look for a file with a name similar to your printer brand.", "Remove or update any pending drivers and run the downloaded setup file."],
+        additionalText: "If you can't update the drivers yourself or identify the necessary drivers, seek further assistance."
+      }
+    },
+    {
+      question: "Operating System or Driver Issue",
+      answer: {
+        mainText: "After updating your operating system, your printer might appear offline if the drivers need updating. This can also occur with a new printer. Here's what to do:",
+        steps: ["Go to System Settings and check for any pending updates.", "Visit the official website of the printer manufacturer and download the latest setup file.", "Once the setup file is downloaded, open Device Manager and update the printer driver. Look for a file with a name similar to your printer brand.", "Remove or update any pending drivers and run the downloaded setup file."],
+        additionalText: "If you can't update the drivers yourself or identify the necessary drivers, seek further assistance."
       }
     }
 
   ],
   troubleshoot_printer: [
     {
-      question: "What are common troubleshooting steps for printer issues?",
+      question: "Operating System or Driver Issue",
       answer: {
-        mainText: "",
-        steps: [],
-        additionalText: ""
+        mainText: "After updating your operating system, your printer might appear offline if the drivers need updating. This can also occur with a new printer. Here's what to do:",
+        steps: ["Go to System Settings and check for any pending updates.", "Visit the official website of the printer manufacturer and download the latest setup file.", "Once the setup file is downloaded, open Device Manager and update the printer driver. Look for a file with a name similar to your printer brand.", "Remove or update any pending drivers and run the downloaded setup file."],
+        additionalText: "If you can't update the drivers yourself or identify the necessary drivers, seek further assistance."
       }
     },
     {
-      question: "How do I update my printer drivers?",
+      question: "Operating System or Driver Issue",
       answer: {
-        mainText: "",
-        steps: [],
-        additionalText: ""
+        mainText: "After updating your operating system, your printer might appear offline if the drivers need updating. This can also occur with a new printer. Here's what to do:",
+        steps: ["Go to System Settings and check for any pending updates.", "Visit the official website of the printer manufacturer and download the latest setup file.", "Once the setup file is downloaded, open Device Manager and update the printer driver. Look for a file with a name similar to your printer brand.", "Remove or update any pending drivers and run the downloaded setup file."],
+        additionalText: "If you can't update the drivers yourself or identify the necessary drivers, seek further assistance."
       }
     },
+    {
+      question: "Operating System or Driver Issue",
+      answer: {
+        mainText: "After updating your operating system, your printer might appear offline if the drivers need updating. This can also occur with a new printer. Here's what to do:",
+        steps: ["Go to System Settings and check for any pending updates.", "Visit the official website of the printer manufacturer and download the latest setup file.", "Once the setup file is downloaded, open Device Manager and update the printer driver. Look for a file with a name similar to your printer brand.", "Remove or update any pending drivers and run the downloaded setup file."],
+        additionalText: "If you can't update the drivers yourself or identify the necessary drivers, seek further assistance."
+      }
+    }
   ],
   printer_wont_print: [
     {
-      question: "What are common troubleshooting steps for printer issues?",
+      question: "Operating System or Driver Issue",
       answer: {
-        mainText: "",
-        steps: [],
-        additionalText: ""
+        mainText: "After updating your operating system, your printer might appear offline if the drivers need updating. This can also occur with a new printer. Here's what to do:",
+        steps: ["Go to System Settings and check for any pending updates.", "Visit the official website of the printer manufacturer and download the latest setup file.", "Once the setup file is downloaded, open Device Manager and update the printer driver. Look for a file with a name similar to your printer brand.", "Remove or update any pending drivers and run the downloaded setup file."],
+        additionalText: "If you can't update the drivers yourself or identify the necessary drivers, seek further assistance."
       }
     },
     {
-      question: "How do I update my printer drivers?",
+      question: "Operating System or Driver Issue",
       answer: {
-        mainText: "",
-        steps: [],
-        additionalText: ""
+        mainText: "After updating your operating system, your printer might appear offline if the drivers need updating. This can also occur with a new printer. Here's what to do:",
+        steps: ["Go to System Settings and check for any pending updates.", "Visit the official website of the printer manufacturer and download the latest setup file.", "Once the setup file is downloaded, open Device Manager and update the printer driver. Look for a file with a name similar to your printer brand.", "Remove or update any pending drivers and run the downloaded setup file."],
+        additionalText: "If you can't update the drivers yourself or identify the necessary drivers, seek further assistance."
       }
     },
+    {
+      question: "Operating System or Driver Issue",
+      answer: {
+        mainText: "After updating your operating system, your printer might appear offline if the drivers need updating. This can also occur with a new printer. Here's what to do:",
+        steps: ["Go to System Settings and check for any pending updates.", "Visit the official website of the printer manufacturer and download the latest setup file.", "Once the setup file is downloaded, open Device Manager and update the printer driver. Look for a file with a name similar to your printer brand.", "Remove or update any pending drivers and run the downloaded setup file."],
+        additionalText: "If you can't update the drivers yourself or identify the necessary drivers, seek further assistance."
+      }
+    }
   ],
   paper_jam_in_printer: [
     {
-      question: "What are common troubleshooting steps for printer issues?",
+      question: "Operating System or Driver Issue",
       answer: {
-        mainText: "",
-        steps: [],
-        additionalText: ""
+        mainText: "After updating your operating system, your printer might appear offline if the drivers need updating. This can also occur with a new printer. Here's what to do:",
+        steps: ["Go to System Settings and check for any pending updates.", "Visit the official website of the printer manufacturer and download the latest setup file.", "Once the setup file is downloaded, open Device Manager and update the printer driver. Look for a file with a name similar to your printer brand.", "Remove or update any pending drivers and run the downloaded setup file."],
+        additionalText: "If you can't update the drivers yourself or identify the necessary drivers, seek further assistance."
       }
     },
     {
-      question: "How do I update my printer drivers?",
+      question: "Operating System or Driver Issue",
       answer: {
-        mainText: "",
-        steps: [],
-        additionalText: ""
+        mainText: "After updating your operating system, your printer might appear offline if the drivers need updating. This can also occur with a new printer. Here's what to do:",
+        steps: ["Go to System Settings and check for any pending updates.", "Visit the official website of the printer manufacturer and download the latest setup file.", "Once the setup file is downloaded, open Device Manager and update the printer driver. Look for a file with a name similar to your printer brand.", "Remove or update any pending drivers and run the downloaded setup file."],
+        additionalText: "If you can't update the drivers yourself or identify the necessary drivers, seek further assistance."
       }
     },
+    {
+      question: "Operating System or Driver Issue",
+      answer: {
+        mainText: "After updating your operating system, your printer might appear offline if the drivers need updating. This can also occur with a new printer. Here's what to do:",
+        steps: ["Go to System Settings and check for any pending updates.", "Visit the official website of the printer manufacturer and download the latest setup file.", "Once the setup file is downloaded, open Device Manager and update the printer driver. Look for a file with a name similar to your printer brand.", "Remove or update any pending drivers and run the downloaded setup file."],
+        additionalText: "If you can't update the drivers yourself or identify the necessary drivers, seek further assistance."
+      }
+    }
   ],
   setting_up_new_printer: [
     {
-      question: "What are common troubleshooting steps for printer issues?",
+      question: "Operating System or Driver Issue",
       answer: {
-        mainText: "",
-        steps: [],
-        additionalText: ""
+        mainText: "After updating your operating system, your printer might appear offline if the drivers need updating. This can also occur with a new printer. Here's what to do:",
+        steps: ["Go to System Settings and check for any pending updates.", "Visit the official website of the printer manufacturer and download the latest setup file.", "Once the setup file is downloaded, open Device Manager and update the printer driver. Look for a file with a name similar to your printer brand.", "Remove or update any pending drivers and run the downloaded setup file."],
+        additionalText: "If you can't update the drivers yourself or identify the necessary drivers, seek further assistance."
       }
     },
     {
-      question: "How do I update my printer drivers?",
+      question: "Operating System or Driver Issue",
       answer: {
-        mainText: "",
-        steps: [],
-        additionalText: ""
+        mainText: "After updating your operating system, your printer might appear offline if the drivers need updating. This can also occur with a new printer. Here's what to do:",
+        steps: ["Go to System Settings and check for any pending updates.", "Visit the official website of the printer manufacturer and download the latest setup file.", "Once the setup file is downloaded, open Device Manager and update the printer driver. Look for a file with a name similar to your printer brand.", "Remove or update any pending drivers and run the downloaded setup file."],
+        additionalText: "If you can't update the drivers yourself or identify the necessary drivers, seek further assistance."
       }
     },
+    {
+      question: "Operating System or Driver Issue",
+      answer: {
+        mainText: "After updating your operating system, your printer might appear offline if the drivers need updating. This can also occur with a new printer. Here's what to do:",
+        steps: ["Go to System Settings and check for any pending updates.", "Visit the official website of the printer manufacturer and download the latest setup file.", "Once the setup file is downloaded, open Device Manager and update the printer driver. Look for a file with a name similar to your printer brand.", "Remove or update any pending drivers and run the downloaded setup file."],
+        additionalText: "If you can't update the drivers yourself or identify the necessary drivers, seek further assistance."
+      }
+    }
   ],
 };
 
