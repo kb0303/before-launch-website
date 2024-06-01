@@ -57,9 +57,16 @@ function App() {
     }, 500);
   };
 
+  const validateEmail = (email) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  };
+
   const handleEmailSubmit = () => {
     if (!email) {
       setEmailError('Email is required');
+    } else if (!validateEmail(email)) {
+      setEmailError('Invalid email format');
     } else {
       setEmailError('');
       setTimeout(() => {
