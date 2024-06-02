@@ -122,7 +122,7 @@ function App() {
       setPhoneError('');
       const formData = { email, ...selectedOptions, manufacturer, phone };
       setIsSubmitting(true);
-      axios.post('http://localhost:5000/api/save', formData)
+      axios.post('http://208.72.154.18/api/save', formData)
         .then(response => {
           console.log('Data saved:', response.data);
           setTimeout(() => {
