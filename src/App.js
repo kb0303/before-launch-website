@@ -60,7 +60,7 @@ function App() {
   const validateEmail = (email) => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
-  };
+  };                                                                           
 
   const handleEmailSubmit = () => {
     if (!email) {
@@ -122,7 +122,7 @@ function App() {
       setPhoneError('');
       const formData = { email, ...selectedOptions, manufacturer, phone };
       setIsSubmitting(true);
-      axios.post('https://before-launch-website-backend.onrender.com/api/save', formData)
+      axios.post('http://localhost:5000/api/save', formData)
         .then(response => {
           console.log('Data saved:', response.data);
           setTimeout(() => {
