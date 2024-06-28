@@ -7,13 +7,11 @@ function Footer() {
 				<footer className="pt-5">
 					<div className="row">
 						<div className="col-12 col-md-2 mb-3">
-							<h5>Section</h5>
+							<h5>Quick Links</h5>
 							<ul className="nav flex-column">
-								<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Home</a></li>
-								<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Features</a></li>
-								<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Pricing</a></li>
-								<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">FAQs</a></li>
-								<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">About</a></li>
+								<li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-body-secondary">Home</a></li>
+								<li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-body-secondary">Categories</a></li>
+								<li className="nav-item mb-2"><a href="tel:+18888506515" className="nav-link p-0 text-body-secondary">Contact Us</a></li>
 							</ul>
 						</div>
 
@@ -31,12 +29,7 @@ function Footer() {
 					</div>
 
 					<div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-						<p>© 2024 Wish Geeks. All rights reserved.</p>
-						<ul className="list-unstyled d-flex">
-							<li className="ms-3"><a className="link-body-emphasis" href="#"><svg className="bi" width="24" height="24"><use href="#twitter"></use></svg></a></li>
-							<li className="ms-3"><a className="link-body-emphasis" href="#"><svg className="bi" width="24" height="24"><use href="#instagram"></use></svg></a></li>
-							<li className="ms-3"><a className="link-body-emphasis" href="#"><svg className="bi" width="24" height="24"><use href="#facebook"></use></svg></a></li>
-						</ul>
+						<p>© 2024 Print Gigs Amc. All rights reserved.</p>
 					</div>
 				</footer>
 			</div>

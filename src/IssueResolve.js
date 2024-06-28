@@ -1,5 +1,6 @@
-import React from 'react';
-import wishgeeks_logo from './img/wishgeeks_logo.png';
+import React, { useEffect } from 'react';
+// import wishgeeks_logo from './img/wishgeeks_logo.png';
+import companyLogo from './img/printerammc.jpg';
 
 const issuesQA = {
   connect_printer: [
@@ -162,13 +163,42 @@ const issuesQA = {
 };
 
 function IssueResolve({ issue }) {
+  useEffect(() => {
+    const addScript = () => {
+      const script = document.createElement('script');
+      script.src = "https://cdn.pulse.is/livechat/loader.js";
+      script.setAttribute('data-live-chat-id', '665c9b5a5fbc0d205b0094dd');
+      script.async = true;
+
+      script.onload = () => {
+        // Script loaded successfully
+        console.log("Script loaded successfully");
+      };
+
+      script.onerror = (error) => {
+        // Error loading script
+        console.error("Error loading script:", error);
+      };
+
+      document.body.appendChild(script);
+    };
+
+    // Add a slight delay before adding the script
+    const timer = setTimeout(addScript, 100);
+
+    // Cleanup function to remove the script when component unmounts
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   const issueContent = issuesQA[issue] || [];
 
   return (
-    <div>
+    <div id="issue-resolve-container">
       <nav>
-        <img src={wishgeeks_logo} alt="Logo" />
-        <p id="company-name">Wish Geeks</p>
+        <img src={companyLogo} alt="Logo" />
+        <p id="company-name">Print Gigs Amc<span className='d-block'>Instant Printer Solution</span></p>
       </nav>
       <div className="issue-resolve-container mt-4">
         <div className='issue-faq-container'>
@@ -202,7 +232,9 @@ function IssueResolve({ issue }) {
                       ))}
                     </ul>
                     <p>{item.answer.additionalText}</p>
-                    <button className='btn btn-primary fw-bold'>Call Us Now</button>
+                    <a href="tel:+18888506515">
+                      <button className='btn btn-primary fw-bold'>Call Us Now</button>
+                    </a>
                   </div>
                 </div>
               </div>

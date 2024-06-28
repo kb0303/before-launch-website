@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -18,27 +19,54 @@ nav {
   align-items: center;
 }
 
+nav a {
+  position: absolute;
+  right: 65px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #007fda;
+}
+
 nav #company-name {
   margin-left: 10px;
-  font-weight: 700;
-  font-size: 1.25rem;
+  font-weight: 600;
+  font-size: 1.2rem;
   margin-bottom: 0;
+  color: #0c59b5;
+  text-align: center;
+}
+
+nav #company-name span {
+  font-size: .86rem;
+  font-weight: 400;
+  position: relative;
+  bottom: 4px;
+  font-family: "Rajdhani", sans-serif;
 }
 
 nav img {
   height: 50px;
-  width: 50px;
 }
 
 .banner-img {
   width: 100%;
-  margin-bottom: 50px;
 }
 
 #quiz-and-choosen-information-container {
   display: flex;
   box-shadow: 0 0 8px lightgray;
 }
+
+/* #quiz-and-choosen-information-container main.root{
+  display: none !important;
+}
+
+#issue-resolve-container main.root {
+  display: block !important;
+} */
 
 .quiz-container {
   width: 70%;
@@ -47,7 +75,7 @@ nav img {
   position: relative;
 }
 
-#quiz-container5 .quiz-options-container  {
+#quiz-container5 .quiz-options-container {
   flex-wrap: nowrap;
 }
 
@@ -463,8 +491,18 @@ nav img {
   text-transform: capitalize;
 }
 
+.img-disclaimer {
+  margin-bottom: 50px;
+  text-align: left;
+  font-size: .7rem;
+}
+
 
 @media screen and (max-width: 600px) {
+  nav a {
+    right: 13px;
+    font-size: .8rem;
+  }
   #quiz-and-choosen-information-container {
     flex-direction: column;
   }
@@ -550,6 +588,7 @@ nav img {
   .device-icons-container {
     flex-direction: column;
   }
+
   .device-icons-wrapper {
     margin-top: 10px;
   }
@@ -558,7 +597,7 @@ nav img {
     padding: 1rem 1.2rem !important;
   }
 
-  .loader-info-container img{
+  .loader-info-container img {
     width: 60% !important;
   }
 }

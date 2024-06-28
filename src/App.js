@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import wishgeeks_logo from './img/wishgeeks_logo.png';
+// import wishgeeks_logo from './img/wishgeeks_logo.png';
+import companyLogo from './img/printerammc.jpg';
 import windowImg from './img/window.png';
 import macImg from './img/mac.png';
 import chromeImg from './img/chrome.png';
@@ -15,7 +16,8 @@ import emailImg from './img/email.png';
 import phoneImg from './img/phone.png';
 import manufacturerImg from './img/manufacturer.png';
 import customerServiceImg from './img/customer-service.png';
-import printerBannerImg from './img/printer-banner.png';
+// import printerBannerImg from './img/printer-banner.png';
+import printerBannerImg from './img/printer-banner.jpg';
 
 import axios from 'axios';
 import IssueResolve from './IssueResolve';
@@ -45,7 +47,11 @@ function App() {
   const [manufacturerError, setManufacturerError] = useState('');
   const [phoneError, setPhoneError] = useState('');
 
+  const [isQuiz1Disabled, setIsQuiz1Disabled] = useState(true);
+
   const handleOptionSelect = (question, value) => {
+    if (isQuiz1Disabled) return;
+
     setSelectedOptions((prev) => ({ ...prev, [question]: value }));
     setTimeout(() => {
       setCurrentQuiz((prev) => prev + 1);
@@ -122,7 +128,7 @@ function App() {
       setPhoneError('');
       const formData = { email, ...selectedOptions, manufacturer, phone };
       setIsSubmitting(true);
-      axios.post('http://208.72.154.18/api/save', formData)
+      axios.post('http://localhost:5000/api/save', formData)
         .then(response => {
           console.log('Data saved:', response.data);
           setTimeout(() => {
@@ -145,13 +151,15 @@ function App() {
       {!isSubmitting && !showIssueResolve && (
         <>
           <nav>
-            <img src={wishgeeks_logo} alt="Logo" />
-            <p id="company-name">Wish Geeks</p>
+            <img src={companyLogo} alt="Logo" />
+            <p id="company-name">Print Gigs Amc<span className='d-block'>Instant Printer Solution</span></p>
+            <a href="tel:+18888506515"><i className="fa-solid fa-phone me-2"></i> +1 (888) 850-6515</a>
           </nav>
 
           <div id="quiz-and-choosen-information-container" className="mt-4">
             <div id="quiz-container1" className="quiz-container" style={{ display: displayQuiz[1] }}>
               <img src={printerBannerImg} alt="Banner Image" className='banner-img' />
+              <p className='img-disclaimer'><span className='fw-bold'>Disclaimer</span>: This website serves as an information source for hardware and software. We are not affiliated or connected to any business or other third-party system. Additionally, we are in no position to endorse any other company’s brand, name, or logo that is presented here only for informational reasons. We fully disclaim any sponsorship or association that is utilized here for anything other than the recommendation. The only purpose of third-party material is for referrals.</p>
               <h5>Q1. What Operating System Do You Use?</h5>
               <div className="quiz-options-container mt-4">
                 <div className={`quiz-option ${selectedOptions.os === 'window' ? 'selected' : ''}`} onClick={() => handleOptionSelect('os', 'window')}>
@@ -240,11 +248,11 @@ function App() {
             </div>
 
             <div id="quiz-container4" className="quiz-container mt-5" style={{ display: displayQuiz[4] }}>
-              <h5>Q4. WHAT IS YOUR PRINTER MODE?</h5>
+              <h5>Q4. WHAT IS YOUR PRINTER MODEL?</h5>
               <div className="quiz-options-container mt-5">
                 <img src={manufacturerImg} alt="Manufacturer Design" className='manufacturer-img' />
                 <div className="row g-3 align-items-center email-input-container">
-                  <label htmlFor="manufacturer" className="form-label">Printer Mode: </label>
+                  <label htmlFor="manufacturer" className="form-label">Printer Model: </label>
                   <input type="text" className="form-control" id="manufacturer" name="manufacturer" placeholder="Enter Your Printer Mode here" onChange={(e) => setManufacturer(e.target.value)} required />
                   {manufacturerError && <div className="error-message text-danger">{manufacturerError}</div>}
                 </div>
