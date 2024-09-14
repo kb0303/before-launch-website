@@ -153,7 +153,7 @@ function App() {
           <nav>
             <img src={companyLogo} alt="Logo" />
             <p id="company-name">Print Gigs Amc<span className='d-block'>Instant Printer Solution</span></p>
-            <a href="tel:+18888506515"><i className="fa-solid fa-phone me-2"></i> +1 (888) 850-6515</a>
+            <a href="tel:+18888843132"><i className="fa-solid fa-phone me-2"></i> +1 (888) 884-3132</a>
           </nav>
 
           <div id="quiz-and-choosen-information-container" className="mt-4">
